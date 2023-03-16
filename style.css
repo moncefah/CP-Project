@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('assets-metropolis/fonts/kanit-semibold.woff') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');*{
+    padding: 0;
+    margin:0;
+    box-sizing: inherit;
+}
+body{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    background-color: black;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+nav{
+    font-family: "Louis Vuitton Web","Helvetica Neue","Helvetica",Arial,sans-serif;
+    font-weight: 100;
+    font-size: 1.3rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    animation-name: drop;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    padding: 0 40px;
+}
+nav > * {
+    flex:4;
+}
+ .logo{
+     height: 80px;
+
+
+ }
+ .info{
+     display: flex;
+     justify-content: space-evenly;
+ }
+
+.info > span{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.info > span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:white;
+    transform-origin: bottom right;
+    transition: transform 0.65s ease-in-out;
+}
+
+.info>span:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+.icons{
+    display: flex;
+    justify-content: flex-end;
+
+
+}
+
+svg{
+
+    margin-left: 30px ;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+@keyframes drop {
+    0% {
+        transform: translateY(-200px);
+    }
+    70% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(0);
+
+    }
+}
+    .hero-text{
+        color: white;
+        font-family: MyFont;
+        font-size:3.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        line-height: 0.9;
+        margin-top : 20px;
+    }
+   .bottom{
+       color: black;
+       -webkit-text-stroke: 2px white;
+   }
+   .img-container{
+       flex: 1;
+       display: flex;
+       align-items: flex-end;
+   }
+   .img-container div:nth-child(1){
+       background-image:url("assets-metropolis/1.jpeg");
+     animation: fill-2 1.6s ;
+   }
+
+
+
+.img-container div:nth-child(2){
+    background-image:url("assets-metropolis/2.jpeg");
+    margin: 0px 15px;
+    animation: fill-1 1.8s;
+
+
+}
+.img-container div:nth-child(3){
+    background-image:url("assets-metropolis/3.jpeg");
+    animation: fill-3 2s ;
+
+}
+
+   .card{
+       height:90%;
+       background-size: cover;
+       flex: 1;
+   }
+
+
+@keyframes fill-1{
+    0%{
+        clip-path: polygon(0 45%, 100% 50%,100% 100% ,0 100%)
+
+ }
+    100%{
+        clip-path: polygon(0 0%, 100% 0%,100% 100% ,0 100%)
+
+    }
+}
+@keyframes fill-2{
+    0%{
+        clip-path: polygon(0 70%, 100% 85%,100% 100% ,0 100%)
+
+    }
+    100%{
+        clip-path: polygon(0 0, 100% 0,100% 100% ,0 100%)
+
+    }
+}
+@keyframes fill-3{
+    0%{
+        clip-path: polygon(0 85%, 100% 70%,100% 100% ,0 100%)
+
+    }
+    100%{
+        clip-path: polygon(0 0, 100% 0,100% 100% ,0 100%)
+
+    }
+}
+
+
+
+
